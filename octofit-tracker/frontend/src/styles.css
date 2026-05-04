@@ -1,0 +1,119 @@
+/* ========== CSS Custom Properties ========== */
+:root {
+  --octo-blue: #0b2e4f;
+  --octo-cyan: #3ba4c7;
+
+  --bg: #f2f7fb;
+  --bg-card: #ffffff;
+  --bg-card-border: #dee2e6;
+  --text: #212529;
+  --text-muted: #6c757d;
+  --table-stripe: rgba(0, 0, 0, 0.04);
+  --input-bg: #ffffff;
+  --input-border: #ced4da;
+  --input-text: #212529;
+}
+
+[data-theme='dark'] {
+  --bg: #0d1117;
+  --bg-card: #161b22;
+  --bg-card-border: #30363d;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --table-stripe: rgba(255, 255, 255, 0.05);
+  --input-bg: #1c2128;
+  --input-border: #30363d;
+  --input-text: #e6edf3;
+}
+
+/* ========== Base ========== */
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  transition: background 0.25s, color 0.25s;
+}
+
+/* ========== NavBar ========== */
+.octo-nav {
+  background: linear-gradient(90deg, var(--octo-blue), #164e7f 55%, var(--octo-cyan));
+}
+
+/* ========== Cards ========== */
+.card {
+  background: var(--bg-card) !important;
+  border-color: var(--bg-card-border) !important;
+  color: var(--text);
+}
+
+/* ========== Hero ========== */
+.hero {
+  background: linear-gradient(130deg, #0e375f 0%, #1d6a9c 70%, #2f9bc2 100%) !important;
+  color: #fff;
+}
+
+.hero h1,
+.hero p {
+  color: #fff !important;
+}
+
+/* ========== Dashboard logo ========== */
+.dashboard-logo {
+  max-height: 120px;
+}
+
+/* ========== Tables ========== */
+.table {
+  color: var(--text);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: var(--table-stripe);
+  color: var(--text);
+}
+
+/* ========== Forms ========== */
+.form-control,
+.form-select {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--input-text);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--input-bg);
+  border-color: var(--octo-cyan);
+  color: var(--input-text);
+  box-shadow: 0 0 0 0.2rem rgba(59, 164, 199, 0.25);
+}
+
+.form-label {
+  color: var(--text);
+}
+
+/* ========== Auth pages ========== */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--bg);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ========== Misc ========== */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+article.border {
+  border-color: var(--bg-card-border) !important;
+  background: var(--bg-card);
+}
+
